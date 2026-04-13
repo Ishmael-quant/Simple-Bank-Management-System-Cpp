@@ -51,3 +51,4 @@
 
 ## Contributors:
 -  Muhammad Hammad Yousaf - mhy20401 (https://github.com/mhy20401)
+-  Ishmael Mboya Ogweno - ishmael-quant (https://github.com/Ishmael-quant)
