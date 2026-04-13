@@ -11,6 +11,7 @@ struct bankmanagement
     string name, address; // Account holder's name and address
     char actype; // Account type (saving or current)
     float amount; // Account balance
+    string password; //Account Password
     
     // Function declarations for various operations on bank accounts
     bool checkavailabilty(); // Check if the account slot is available
@@ -21,6 +22,7 @@ struct bankmanagement
     void check_account(); // Display account details
     void modifyaccount(); // Modify account information
     void deleteaccount(); // Delete an account
+    bool login();//to ensure security of accounts
     
     // Constructor to initialize account attributes
     bankmanagement()
@@ -30,6 +32,7 @@ struct bankmanagement
         address="";
         actype='\0';
         amount=0.0; 
+        password="";
     }
      
 };
@@ -48,7 +51,7 @@ int main()
         cout<<"             =================              "<<endl;
         cout<<"             |   Bank Menu   |              "<<endl;
         cout<<"=========================================="<<endl;
-        cout<<" Enter 1 to create an new account.\n Enter 2 to Deposit.\n Enter 3 to Withdraw.\n Enter 4 to Check account.\n Enter 5 to Modify.\n Enter 6 to Delete.\n Enter 7 to show all accounts.\n Enter 8 to exit";
+        cout<<" Enter 1 to create an new account and log in.\n Enter 2 to Deposit.\n Enter 3 to Withdraw.\n Enter 4 to Check account.\n Enter 5 to Modify.\n Enter 6 to Delete.\n Enter 7 to show all accounts.\n Enter 8 to exit";
         cout<<"\n=========================================="<<endl;
         cout<<" Enter choice no: ";
         cin>>x; // Get user's choice
@@ -65,7 +68,8 @@ int main()
                     {
                         check=true;
                         b[i].newaccount(); // Call function to create a new account
-                        cout<<" working.";
+                        b[i].login();
+                        cout<<"  And now working.";
                         break;
                     }   
                 }
@@ -85,13 +89,19 @@ int main()
                     if(b[i].searchaccount(an)) // Search for the account
                     {
                         check=true;
-                        b[i].deposit(); // Call function to deposit money
+                       if (b[i].login())
+                        {
+                           b[i].deposit();  // Call function to deposit money                      
+                        } 
+                        else {
+                            cout<<"Access Denied!";
+                        } 
                         break;
                     }   
                 }
                 
                 if(check==false)
-                    cout<<" No account found ."; // Notify if account not found
+                    cout<<" No account found. Check the account no. "; // Notify if account not found
                     
                 break;
             }
@@ -105,13 +115,19 @@ int main()
                     if(b[i].searchaccount(an)) // Search for the account
                     {
                         check=true;
-                        b[i].withdraw(); // Call function to withdraw money
+                        if (b[i].login())
+                        {
+                            b[i].withdraw(); // Call function to withdraw money
+                        }
+                        else {
+                            cout<<"Access Denied!";
+                        }
                         break;
                     }   
                 }
                 
                 if(check==false)
-                    cout<<" No account found ."; // Notify if account not found
+                    cout<<" No account found. Check the account no. "; // Notify if account not found
                     
                 break;      
             }
@@ -125,13 +141,19 @@ int main()
                     if(b[i].searchaccount(an)) // Search for the account
                     {
                         check=true;
-                        b[i].check_account(); // Call function to display account details
+                        if (b[i].login())
+                        {
+                            b[i].check_account(); // Call function to display account details
+                        }
+                        else {
+                            cout<<"Access Denied!";
+                        }
                         break;
                     }   
                 }
                 
                 if(check==false)
-                    cout<<" No account found ."; // Notify if account not found
+                    cout<<" No account found! ."; // Notify if account not found
                     
                 break;      
                 
@@ -146,13 +168,19 @@ int main()
                     if(b[i].searchaccount(an)) // Search for the account
                     {
                         check=true;
-                        b[i].modifyaccount(); // Call function to modify account information
+                        if (b[i].login())
+                        {
+                            b[i].modifyaccount(); // Call function to modify account information
+                        }
+                        else {
+                            cout<<"Access Denied!";
+                        }
                         break;
                     }   
                 }
                 
                 if(check==false)
-                    cout<<" No account found ."; // Notify if account not found
+                    cout<<" No account found! ."; // Notify if account not found
                     
                 break;      
             }
@@ -166,13 +194,19 @@ int main()
                     if(b[i].searchaccount(an)) // Search for the account
                     {
                         check=true;
-                        b[i].deleteaccount(); // Call function to delete the account
+                        if (b[i].login())
+                        {
+                            b[i].deleteaccount(); // Call function to delete the account
+                        }
+                        else {
+                            cout<<"Access Denied!";
+                        }
                         break;
                     }   
                 }
                 
                 if(check==false)
-                    cout<<" No account found ."; // Notify if account not found
+                    cout<<" No account found! ."; // Notify if account not found
                     
                 break;      
             }
@@ -192,7 +226,7 @@ int main()
                 }
                 
                 if(check==false)
-                    cout<<" No account found ."; // Notify if no accounts are found
+                    cout<<" No account found! ."; // Notify if no accounts are found
                     
                 break;      
             }
@@ -208,7 +242,20 @@ int main()
     
     return 0;
 }
+bool bankmanagement::login(){
+    string pass;
+    cin>>password;
 
+    if (pass==password)
+    {
+        return true;
+    }
+    else {
+        cout<<"Wrong Password"<< endl;
+
+        return false;
+    }
+}
 // Function to check if the account slot is available
 bool bankmanagement::checkavailabilty()
 {
@@ -231,7 +278,7 @@ bool bankmanagement::searchaccount(int a)
 // Function to create a new account
 void bankmanagement::newaccount()
 {
-    
+
     cout<< " Enter your account no: ";
     cin>> accno; // Get account number
     
@@ -243,11 +290,14 @@ void bankmanagement::newaccount()
    
     cout<< " What type of account you want to open saving(s) or Current(c):";
     cin>> actype; // Get account type
+
+    cout <<"Create Your Password: ";
+    cin >>password;
    
     cout<< " Enter How much money you want to deposit: ";
     cin>> amount; // Get initial deposit amount
 	    
-    cout << " Account Created Successfully...";	    
+    cout << " Account Created Successfully!...";	    
 }
 
 // Function to deposit money into an account
@@ -257,7 +307,7 @@ void bankmanagement::deposit()
     cout<<"\n Enter amount to Deposit = ";
     cin>>d; // Get amount to deposit
     amount += d; // Update account balance
-    cout<<" Updated...New Amount = "<<amount; // Notify user about updated balance
+    cout<<" Updated!...New Balance = "<<amount; // Notify user about updated balance
 }
 
 // Function to withdraw money from an account
@@ -269,13 +319,13 @@ void bankmanagement::withdraw()
     if(wd<=amount) // Check if withdrawal amount is less than or equal to account balance
     {
         amount -= wd; // Update account balance
-        cout<<"\n Amount is withdrawed."; // Notify user about successful withdrawal
+        cout<<"\n  Successfully withdrawal!."; // Notify user about successful withdrawal
     }
     else
     {
-        cout<<"\n You don't have enough amount in the bank."; // Notify user if insufficient balance
+        cout<<"\n You don't have enough amount in the bank account!."; // Notify user if insufficient balance
     }
-    cout<<"\n Remaining amount: "<<amount; // Notify user about remaining balance
+    cout<<"\n Remaining Balance: "<<amount; // Notify user about remaining balance
 }
 
 // Function to display account details
@@ -305,7 +355,7 @@ void bankmanagement::modifyaccount()
     cout<<"\n Modify Type of Account: saving (s) or Current (c): ";
     cin>>actype; // Get modified account type
     
-    cout<<"\n Account is modified."; // Notify user about successful modification
+    cout<<"\n Account is successfully modified!."; // Notify user about successful modification
 }
 
 // Function to delete an account
@@ -317,5 +367,6 @@ void bankmanagement::deleteaccount()
     address=""; // Reset account holder's address
     actype='\0'; // Reset account type
     amount=0.0; // Reset account balance
-    cout<<"\n Successfully deleted."; // Notify user about successful deletion
+    password="";
+    cout<<"\n Successfully deleted!."; // Notify user about successful deletion
 }
