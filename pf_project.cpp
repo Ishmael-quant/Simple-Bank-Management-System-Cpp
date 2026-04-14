@@ -220,7 +220,7 @@ void bankmanagement::withdraw()
     cout<<"\n Enter amount to withdraw = ";
     cin>>wd;
 
-    // 🔹 Improvement: prevent invalid withdrawal
+    //Improvement: prevent invalid withdrawal
     if(wd <= 0){
         cout<<" Invalid amount!";
         return;
@@ -242,7 +242,7 @@ void bankmanagement::withdraw()
 // Function to display account details
 void bankmanagement::check_account()
 {
-    cout<< "\n Account No: "<<accno; // 🔹 Improvement: added account number
+    cout<< "\n Account No: "<<accno; //Improvement: added account number
     cout<< "\n Your name: "<<name;
     cout<< "\n Your address: "<<address;
     cout<< "\n Account type: "<<actype;
