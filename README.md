@@ -11,9 +11,7 @@
 -  Deleting an account.
 
 ## Output:
-![image](https://github.com/mhy20401/Bank-Management-System-Cpp/assets/99351091/29b1571e-cac9-47b4-b0e1-32fa08bae741)
-
-![image](https://github.com/mhy20401/Bank-Management-System-Cpp/assets/99351091/232cb0f2-9743-4233-90ee-e0ed03d4c848)
+<img width="979" height="512" alt="Image" src="https://github.com/user-attachments/assets/4369cc61-6984-4d6e-9466-d144e70e0a19" />
 
 ### 1. Creating a new account:
 ![image](https://github.com/mhy20401/Bank-Management-System-Cpp/assets/99351091/be10c49d-4f05-469a-b6e7-a4075e0b8b59)
