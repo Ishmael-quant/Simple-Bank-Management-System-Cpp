@@ -14,37 +14,28 @@
 <img width="979" height="512" alt="Image" src="https://github.com/user-attachments/assets/4369cc61-6984-4d6e-9466-d144e70e0a19" />
 
 ### 1. Creating a new account:
-![image](https://github.com/mhy20401/Bank-Management-System-Cpp/assets/99351091/be10c49d-4f05-469a-b6e7-a4075e0b8b59)
+<img width="979" height="512" alt="Image" src="https://github.com/user-attachments/assets/22421991-5b8d-46ce-9baa-d755f26c77b2" />
 
-![image](https://github.com/mhy20401/Bank-Management-System-Cpp/assets/99351091/7de05fcd-50fa-4a69-9f9b-682e98edbf3e)
+### 2.Loging In:
+<img width="979" height="512" alt="Image" src="https://github.com/user-attachments/assets/645033ac-60f4-48f7-b73f-cc240bc1aa86" />
 
-### 2. Depositing money:
-![image](https://github.com/mhy20401/Bank-Management-System-Cpp/assets/99351091/49bfab59-9b34-4e3a-82e3-97840f150fd8)
+### 3. Depositing money:
+<img width="979" height="512" alt="Image" src="https://github.com/user-attachments/assets/f261d8c3-3243-4ab0-bab6-3c11109e290a" />
 
-![image](https://github.com/mhy20401/Bank-Management-System-Cpp/assets/99351091/c45aa245-aa96-4aa1-8128-87f78fa7c92b)
+### 4. Withdrawing money:
+<img width="979" height="512" alt="Image" src="https://github.com/user-attachments/assets/645033ac-60f4-48f7-b73f-cc240bc1aa86" />
 
-### 3. Withdrawing money:
-![image](https://github.com/mhy20401/Bank-Management-System-Cpp/assets/99351091/d07fbe91-0a12-47b1-a687-45e62f48da07)
+### 5. Checking account details:
+<img width="979" height="512" alt="Image" src="https://github.com/user-attachments/assets/6080678d-acb1-4e87-a563-8792752951fa" />
 
-![image](https://github.com/mhy20401/Bank-Management-System-Cpp/assets/99351091/96d79705-7346-4363-89d4-56a623cdae12)
+### 6. Modifying existing account:
+<img width="979" height="512" alt="Image" src="https://github.com/user-attachments/assets/118687d7-4e26-4725-8c86-633fd08b6acf" />
 
-### 4. Checking account details:
-![image](https://github.com/mhy20401/Bank-Management-System-Cpp/assets/99351091/519e13cd-1c4f-4498-848e-a0cdefe9ada0)
+### 7. Viewing all existing accounts:
+<img width="979" height="512" alt="Image" src="https://github.com/user-attachments/assets/c1020506-cd52-42d6-8719-84a78ec2c70c" />
 
-### 5. Modifying existing account:
-![image](https://github.com/mhy20401/Bank-Management-System-Cpp/assets/99351091/aa99b5f2-dc17-42bb-93b6-89a6a3afcf1f)
-
-### 6. Viewing all existing accounts:
-![image](https://github.com/mhy20401/Bank-Management-System-Cpp/assets/99351091/8e37869a-e359-4e2e-bda7-53dd0d2c2c95)
-
-### 7. Deleting account:
-![image](https://github.com/mhy20401/Bank-Management-System-Cpp/assets/99351091/591a9c05-f554-41d9-9cef-6a727f3612bb)
-
-![image](https://github.com/mhy20401/Bank-Management-System-Cpp/assets/99351091/7c37696e-8521-43ff-9cce-90d77b3e436c)
-
-![image](https://github.com/mhy20401/Bank-Management-System-Cpp/assets/99351091/03f9f828-02c1-4b09-b117-ca62f04b226b)
-
-![image](https://github.com/mhy20401/Bank-Management-System-Cpp/assets/99351091/df31d95e-8325-4420-98d8-11f5d97963ba)
+### 8. Deleting account:
+<img width="979" height="512" alt="Image" src="https://github.com/user-attachments/assets/0863624e-fb5e-4598-99a7-1ae84a7e4b92" />
 
 ## Contributors:
 -  Muhammad Hammad Yousaf - mhy20401 (https://github.com/mhy20401)
