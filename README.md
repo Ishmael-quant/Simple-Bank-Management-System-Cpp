@@ -9,7 +9,6 @@
 -  Modifying account information,
 -  Viewing all existing accounts &
 -  Deleting an account.
--  Basic File Saving of Account with Balance
 
 ## Output:
 ![image](https://github.com/mhy20401/Bank-Management-System-Cpp/assets/99351091/29b1571e-cac9-47b4-b0e1-32fa08bae741)
